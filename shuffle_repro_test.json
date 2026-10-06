@@ -1,0 +1,8 @@
+{
+  "n_human_reproduced": 0,
+  "n_uniform_reproduced": 0,
+  "n_shuffle_reproduced": 64,
+  "verdict": "delivered source REPRODUCES the delivered shuffles",
+  "n_replayed_present_in_delivered": 64,
+  "seed": 20260804
+}

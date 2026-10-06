@@ -1,0 +1,85 @@
+{
+  "q1_total_rows": 261,
+  "q1_ensemble_counts": {
+    "human_weighted": 96,
+    "uniform": 96,
+    "composition_shuffle": 64,
+    "bounding_control": 4,
+    "current_construct": 1
+  },
+  "q2_orig_human_cai": 0.8110396713611927,
+  "q2_max_human_cai_among_random": 0.8110396713611927,
+  "q2_orig_is_max": true,
+  "q2_n_candidates_tie_original": 64,
+  "q3_dominators_all_261_count": 5,
+  "q3_dominators_all_261_ids": [
+    "composition_shuffle_011",
+    "composition_shuffle_027",
+    "composition_shuffle_052",
+    "composition_shuffle_055",
+    "composition_shuffle_056"
+  ],
+  "q3_dominators_restricted_count": 0,
+  "q3_dominators_restricted_ids": [],
+  "q4_random_rows": 256,
+  "q4_pass_cai_ge_orig": 64,
+  "q5_n_shuffle_rows": 64,
+  "q5_shuffles_worse_than_orig_mfe": 55,
+  "q5_shuffles_worse_than_orig_lires": 31,
+  "q6_n_rows": 256,
+  "q6_corr_matrix": [
+    [
+      0.9999999999999998,
+      -0.8645064107899951,
+      0.26188892200841185
+    ],
+    [
+      -0.8645064107899951,
+      0.9999999999999998,
+      -0.32193740043167113
+    ],
+    [
+      0.26188892200841185,
+      -0.32193740043167113,
+      1.0
+    ]
+  ],
+  "q6_eigenvalues": [
+    2.030105197568575,
+    0.8367474765725621,
+    0.1331473258588627
+  ],
+  "q6_participation_ratio": 1.859810899920404,
+  "q7_n_sequences": 261,
+  "q7_all_1083nt": true,
+  "q7_n_distinct_proteins": 1,
+  "q7_all_translate_identical_360aa": true,
+  "q7_protein_length": 360,
+  "q8_longest_direct_repeat_len": 197,
+  "q8_longest_direct_repeat_positions": [
+    459,
+    672
+  ],
+  "q8_longest_homopolymer_len": 4,
+  "q8_longest_homopolymer_base": "C",
+  "q8_longest_homopolymer_start": 306,
+  "q9_donor_motif_counts": {
+    "GTAAGT": 0,
+    "GTGAGT": 0,
+    "GTATGT": 0,
+    "GTACGT": 0
+  },
+  "q9_donor_motif_total": 0,
+  "q9_polya_motif_counts": {
+    "AATAAA": 0,
+    "ATTAAA": 0,
+    "AATAAT": 0,
+    "CATAAA": 0,
+    "TATAAA": 0
+  },
+  "q9_polya_motif_total": 0,
+  "q10_mature_length": 2013,
+  "q10_cds_length": 1083,
+  "q10_splice_reproduces_mature": true,
+  "q10_region_equals_cds": true
+}

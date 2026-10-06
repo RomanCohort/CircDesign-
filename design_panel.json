@@ -1,0 +1,68 @@
+{
+  "what": "pre-registered mechanism-motivated panel, CDS level",
+  "note": "every metric reported; multiplicity corrected explicitly",
+  "n_directional_metrics": 7,
+  "expected_false_positives_at_0.05": 0.35000000000000003,
+  "observed_significant": [],
+  "results": {
+    "homopolymer_max": {
+      "original": 4.0,
+      "shuffle_mean": 4.984375,
+      "rank": 13,
+      "p_exchangeability": 0.2,
+      "significant_at_0.05": false
+    },
+    "gc_window_max": {
+      "original": 0.74,
+      "shuffle_mean": 0.74375,
+      "rank": 43,
+      "p_exchangeability": 0.6615384615384615,
+      "significant_at_0.05": false
+    },
+    "gc_window_min": {
+      "original": 0.48,
+      "shuffle_mean": 0.464375,
+      "note": "direction ambiguous -- descriptive only"
+    },
+    "low_complexity_max": {
+      "original": 9.0,
+      "shuffle_mean": 7.609375,
+      "rank": 55,
+      "p_exchangeability": 0.8461538461538461,
+      "significant_at_0.05": false
+    },
+    "direct_repeat_max": {
+      "original": 60.0,
+      "shuffle_mean": 26.125,
+      "rank": 65,
+      "p_exchangeability": 1.0,
+      "significant_at_0.05": false
+    },
+    "inverted_repeat_max": {
+      "original": 9.0,
+      "shuffle_mean": 9.796875,
+      "note": "direction ambiguous -- descriptive only"
+    },
+    "restriction_sites": {
+      "original": 3.0,
+      "shuffle_mean": 3.40625,
+      "rank": 36,
+      "p_exchangeability": 0.5538461538461539,
+      "significant_at_0.05": false
+    },
+    "polya_signals": {
+      "original": 0.0,
+      "shuffle_mean": 0.015625,
+      "rank": 64,
+      "p_exchangeability": 0.9846153846153847,
+      "significant_at_0.05": false
+    },
+    "splice_donors": {
+      "original": 0.0,
+      "shuffle_mean": 0.875,
+      "rank": 27,
+      "p_exchangeability": 0.4153846153846154,
+      "significant_at_0.05": false
+    }
+  }
+}

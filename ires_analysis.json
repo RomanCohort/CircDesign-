@@ -1,0 +1,163 @@
+{
+  "what": "new IRES metrics under correct null models",
+  "percentiles_by_null": {
+    "ires_native_recall_hard_666|pooled 256": 81.8359375,
+    "ires_native_recall_hard_666|human_weighted 96": 80.72916666666667,
+    "ires_native_recall_hard_666|uniform 96": 88.02083333333333,
+    "ires_native_recall_hard_666|composition_shuffle 64": 74.21875,
+    "ires_native_recall_hard_666|weighted+uniform 192": 84.375,
+    "ires_native_recall_soft_666|pooled 256": 69.53125,
+    "ires_native_recall_soft_666|human_weighted 96": 72.91666666666667,
+    "ires_native_recall_soft_666|uniform 96": 79.16666666666667,
+    "ires_native_recall_soft_666|composition_shuffle 64": 50.0,
+    "ires_native_recall_soft_666|weighted+uniform 192": 76.04166666666667,
+    "ires_cross_occupancy_666|pooled 256": 87.890625,
+    "ires_cross_occupancy_666|human_weighted 96": 91.66666666666667,
+    "ires_cross_occupancy_666|uniform 96": 94.79166666666667,
+    "ires_cross_occupancy_666|composition_shuffle 64": 71.875,
+    "ires_cross_occupancy_666|weighted+uniform 192": 93.22916666666667,
+    "ires_mean_pair_prob_666|pooled 256": 15.234375,
+    "ires_mean_pair_prob_666|human_weighted 96": 15.625,
+    "ires_mean_pair_prob_666|uniform 96": 5.208333333333333,
+    "ires_mean_pair_prob_666|composition_shuffle 64": 29.6875,
+    "ires_mean_pair_prob_666|weighted+uniform 192": 10.416666666666666,
+    "ires_native_recall_hard_669|pooled 256": 83.59375,
+    "ires_native_recall_hard_669|human_weighted 96": 83.85416666666667,
+    "ires_native_recall_hard_669|uniform 96": 90.10416666666667,
+    "ires_native_recall_hard_669|composition_shuffle 64": 73.4375,
+    "ires_native_recall_hard_669|weighted+uniform 192": 86.97916666666667,
+    "ires_native_recall_soft_669|pooled 256": 71.875,
+    "ires_native_recall_soft_669|human_weighted 96": 75.0,
+    "ires_native_recall_soft_669|uniform 96": 82.29166666666667,
+    "ires_native_recall_soft_669|composition_shuffle 64": 51.5625,
+    "ires_native_recall_soft_669|weighted+uniform 192": 78.64583333333333,
+    "ires_cross_occupancy_669|pooled 256": 87.890625,
+    "ires_cross_occupancy_669|human_weighted 96": 91.66666666666667,
+    "ires_cross_occupancy_669|uniform 96": 94.79166666666667,
+    "ires_cross_occupancy_669|composition_shuffle 64": 71.875,
+    "ires_cross_occupancy_669|weighted+uniform 192": 93.22916666666667,
+    "ires_mean_pair_prob_669|pooled 256": 14.0625,
+    "ires_mean_pair_prob_669|human_weighted 96": 14.583333333333334,
+    "ires_mean_pair_prob_669|uniform 96": 4.166666666666667,
+    "ires_mean_pair_prob_669|composition_shuffle 64": 28.125,
+    "ires_mean_pair_prob_669|weighted+uniform 192": 9.375
+  },
+  "exchangeability_test": {
+    "ires_native_recall_hard_666": {
+      "original": 0.7956989247311828,
+      "shuffle_mean": 0.7483198924731183,
+      "shuffle_sd": 0.07898603387954131,
+      "z": 0.5998406291714876,
+      "rank": 19,
+      "n": 65,
+      "p_exchangeability": 0.2923076923076923,
+      "significant_at_0.05": false
+    },
+    "ires_native_recall_soft_666": {
+      "original": 0.7039879450814859,
+      "shuffle_mean": 0.7075228844996899,
+      "shuffle_sd": 0.0587353183172276,
+      "z": -0.06018422168263302,
+      "rank": 33,
+      "n": 65,
+      "p_exchangeability": 0.5076923076923077,
+      "significant_at_0.05": false
+    },
+    "ires_cross_occupancy_666": {
+      "original": 0.5870870870870871,
+      "shuffle_mean": 0.6469594594594594,
+      "shuffle_sd": 0.0803800420231655,
+      "z": -0.7448661491756513,
+      "rank": 19,
+      "n": 65,
+      "p_exchangeability": 0.2923076923076923,
+      "significant_at_0.05": false
+    },
+    "ires_mean_pair_prob_666": {
+      "original": 0.6273138922547496,
+      "shuffle_mean": 0.6337388210526258,
+      "shuffle_sd": 0.011117049433369434,
+      "z": -0.5779347151763845,
+      "rank": 46,
+      "n": 65,
+      "p_exchangeability": 0.7076923076923077,
+      "significant_at_0.05": false
+    },
+    "ires_unpaired_frac_666": {
+      "original": 0.3603603603603603,
+      "shuffle_mean": 0.3530405405405405,
+      "note": "direction ambiguous -- descriptive only"
+    },
+    "ires_native_recall_hard_669": {
+      "original": 0.8587570621468926,
+      "shuffle_mean": 0.806497175141243,
+      "shuffle_sd": 0.08494580759716465,
+      "z": 0.6152144347544469,
+      "rank": 19,
+      "n": 65,
+      "p_exchangeability": 0.2923076923076923,
+      "significant_at_0.05": false
+    },
+    "ires_native_recall_soft_669": {
+      "original": 0.767935593849269,
+      "shuffle_mean": 0.7591873600329215,
+      "shuffle_sd": 0.06290327925231594,
+      "z": 0.13907436814632199,
+      "rank": 32,
+      "n": 65,
+      "p_exchangeability": 0.49230769230769234,
+      "significant_at_0.05": false
+    },
+    "ires_cross_occupancy_669": {
+      "original": 0.5889387144992526,
+      "shuffle_mean": 0.6470711883408071,
+      "shuffle_sd": 0.08052662401176519,
+      "z": -0.7219037747448741,
+      "rank": 19,
+      "n": 65,
+      "p_exchangeability": 0.2923076923076923,
+      "significant_at_0.05": false
+    },
+    "ires_mean_pair_prob_669": {
+      "original": 0.6280637250291711,
+      "shuffle_mean": 0.6350179802069215,
+      "shuffle_sd": 0.01103797962188755,
+      "z": -0.6300297170290642,
+      "rank": 47,
+      "n": 65,
+      "p_exchangeability": 0.7230769230769231,
+      "significant_at_0.05": false
+    },
+    "ires_unpaired_frac_669": {
+      "original": 0.358744394618834,
+      "shuffle_mean": 0.35150411061285497,
+      "note": "direction ambiguous -- descriptive only"
+    }
+  },
+  "vs_replaced_lires": {
+    "ires_native_recall_hard_666_vs_lires": {
+      "spearman_rho": -0.7616197176463698,
+      "p": 1.032925806020344e-50
+    },
+    "ires_native_recall_soft_666_vs_lires": {
+      "spearman_rho": -0.8550481756495216,
+      "p": 7.811515305401163e-76
+    },
+    "ires_cross_occupancy_666_vs_lires": {
+      "spearman_rho": 0.0021730601641275532,
+      "p": 0.9721288649688716
+    },
+    "ires_native_recall_hard_669_vs_lires_ires669": {
+      "spearman_rho": -0.7887658889531504,
+      "p": 1.1469421975865686e-56
+    },
+    "ires_native_recall_soft_669_vs_lires_ires669": {
+      "spearman_rho": -0.8410046641844562,
+      "p": 4.712729306511964e-71
+    },
+    "ires_cross_occupancy_669_vs_lires_ires669": {
+      "spearman_rho": 0.003211849252984088,
+      "p": 0.9588154782009961
+    }
+  }
+}

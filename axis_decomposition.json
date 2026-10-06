@@ -1,0 +1,136 @@
+{
+  "description": "composition / arrangement decomposition of the synonymous reference space",
+  "definitions": {
+    "composition_axis": "61-dim sense-codon usage vector of the 1083 nt CDS",
+    "arrangement_axis": "3721-dim codon-pair count matrix minus its exact expectation under a uniformly random permutation of the SAME codon multiset, i.e. under the composition_shuffle null",
+    "n_composition_pcs": 15,
+    "n_arrangement_pcs": 30,
+    "n_sequences": 261
+  },
+  "self_checks": {
+    "protein_identical_across_all_candidates": true,
+    "shuffle_and_original_share_one_codon_usage_vector": true,
+    "min_l1_distance_usage_to_non_shuffle": 134.0
+  },
+  "explained_variance": {
+    "composition_pcs_cumulative": [
+      0.463684600257528,
+      0.5765460458359687,
+      0.6563417892190406,
+      0.6977927323010089,
+      0.7266876577481224,
+      0.7459172261978445,
+      0.7641096739375572,
+      0.7813773973850748,
+      0.7964400284487237,
+      0.810652083027066,
+      0.8243248187040249,
+      0.8368663174944372,
+      0.8486168607493033,
+      0.8598670879984134,
+      0.8707057550058954
+    ],
+    "arrangement_pcs_cumulative": [
+      0.07395696358411656,
+      0.09647890912470748,
+      0.11301735866600301,
+      0.12848395482809838,
+      0.14079308340270694,
+      0.15242567633285078,
+      0.163319189961765,
+      0.17352400285782732,
+      0.18348784303092405,
+      0.19323982566000117,
+      0.20285795984671032,
+      0.21228913261672666,
+      0.2214748547926263,
+      0.2304371847754929,
+      0.2392312500101762,
+      0.24782663026187993,
+      0.25622088472521354,
+      0.26444305620533526,
+      0.27260609373155875,
+      0.28051955170855636,
+      0.28834396792269446,
+      0.296025995800976,
+      0.3035609653273334,
+      0.31098236457258754,
+      0.31829236620770324,
+      0.32551473457430896,
+      0.3325871696128684,
+      0.3395632224265126,
+      0.3463867623567322,
+      0.3530168294728105
+    ]
+  },
+  "variance_decomposition": {
+    "circular_mfe_kcal_mol": {
+      "label": "Circular MFE",
+      "r2_composition_only": 0.8050717763343759,
+      "r2_composition_plus_arrangement": 0.8102071652339944,
+      "r2_arrangement_incremental": 0.005135388899618509
+    },
+    "human_cai": {
+      "label": "Human CAI",
+      "r2_composition_only": 0.9894133361819785,
+      "r2_composition_plus_arrangement": 0.9909451828361174,
+      "r2_arrangement_incremental": 0.0015318466541389686
+    },
+    "lires": {
+      "label": "L- IRES deviation (666 nt)",
+      "r2_composition_only": -0.11348451044314933,
+      "r2_composition_plus_arrangement": -0.15429042399391085,
+      "r2_arrangement_incremental": -0.04080591355076152
+    },
+    "lires_ires669": {
+      "label": "L- IRES deviation (669 nt)",
+      "r2_composition_only": -0.08558716299231801,
+      "r2_composition_plus_arrangement": -0.12721263569570376,
+      "r2_arrangement_incremental": -0.04162547270338575
+    }
+  },
+  "metric_space": {
+    "correlation_matrix": [
+      [
+        1.0,
+        -0.8645064107899946,
+        0.26188892200841196
+      ],
+      [
+        -0.8645064107899946,
+        1.0,
+        -0.3219374004316709
+      ],
+      [
+        0.26188892200841196,
+        -0.3219374004316709,
+        1.0
+      ]
+    ],
+    "eigenvalues": [
+      2.030105197568574,
+      0.8367474765725621,
+      0.13314732585886302
+    ],
+    "effective_rank": 1.8598108999204046,
+    "labels": [
+      "circular_mfe",
+      "human_cai",
+      "lires_666"
+    ]
+  },
+  "axis_spread_by_ensemble": {
+    "human_weighted": {
+      "composition_pc1_sd": 2.9646566513804173,
+      "arrangement_pc1_sd": 1.1780810206264303
+    },
+    "uniform": {
+      "composition_pc1_sd": 2.8208532756758147,
+      "arrangement_pc1_sd": 1.00038532587492
+    },
+    "composition_shuffle": {
+      "composition_pc1_sd": 0.0,
+      "arrangement_pc1_sd": 0.7385964801761692
+    }
+  }
+}

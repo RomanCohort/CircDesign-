@@ -1,0 +1,25 @@
+{
+  "what": "interpretable IRES metrics, same physics as L_IRES",
+  "replaces": "L_IRES (L2 distance between BPP matrices)",
+  "reference_construction": "circular full-length partition function with every non-IRES nucleotide forced unpaired; identical to constrained_ires_reference() used for L_IRES",
+  "bpp_cutoff": 1e-05,
+  "pair_threshold": 0.5,
+  "windows": {
+    "666": [
+      101,
+      766
+    ],
+    "669": [
+      101,
+      769
+    ]
+  },
+  "definitions": {
+    "ires_native_recall_hard": "of ref pairs with p>=0.5, fraction still p>=0.5 in candidate",
+    "ires_native_recall_soft": "mean candidate probability over the same ref pair set",
+    "ires_cross_occupancy": "fraction of IRES residues that pair outside the IRES (p>=0.5)",
+    "ires_unpaired_frac": "fraction of IRES residues with total pairing probability <0.5",
+    "ires_mean_pair_prob": "mean total pairing probability per IRES residue"
+  },
+  "n_candidates": 261
+}

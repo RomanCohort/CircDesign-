@@ -1,0 +1,11 @@
+{
+  "n_delivered_shuffles": 64,
+  "max_abs_deviation_kcal_mol": 0.0,
+  "fold_identical": true,
+  "competitive_with_my_fold": 9,
+  "competitive_delivered": 9,
+  "refolded_mfe_min": -783.5999755859375,
+  "refolded_mfe_median": -765.25,
+  "refolded_mfe_max": -749.7999877929688,
+  "verdict": "fold path IDENTICAL -- the discrepancy is in SAMPLE GENERATION, not in the fold"
+}

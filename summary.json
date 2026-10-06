@@ -1,0 +1,506 @@
+{
+  "analysis_title": "Combined mature circRNA retrospective circDesign-inspired evaluation",
+  "analysis_timestamp_local": "2026-08-05 02:09:06 EDT",
+  "input_file": "111 YRH pUC57-ALL4-4xmC3dP28 vector 1101(1).dna",
+  "input_sha256": "ada78f4e6cfd04c61c5643cbbb499b55611282034609709cefe2a59881ac7762",
+  "software": {
+    "python": "3.12.13",
+    "ViennaRNA": "2.7.0",
+    "Biopython": "1.85",
+    "random_seed": 20260804,
+    "bpp_cutoff": 1e-05,
+    "workers": 8
+  },
+  "coordinate_model": {
+    "plasmid_length_bp": 5267,
+    "mature_circle_plasmid_coordinates_1based_inclusive": [
+      723,
+      2735
+    ],
+    "mature_circle_length_nt": 2013,
+    "junction_32nt_each_side": "TGGTCGCCGACTCAGTAGATGTTTTCTTGGGT|CTACCGTTTAATATTGCGTCATATTCGGCGAC",
+    "cds_plasmid_coordinates_1based_inclusive": [
+      1504,
+      2586
+    ],
+    "cds_mature_coordinates_1based_inclusive": [
+      782,
+      1864
+    ],
+    "cds_length_nt": 1083,
+    "protein_length_aa": 360,
+    "internal_stop_count": 0,
+    "ires_primary_plasmid_coordinates": [
+      823,
+      1488
+    ],
+    "ires_primary_mature_coordinates": [
+      101,
+      766
+    ],
+    "ires_primary_length_nt": 666,
+    "ires_sensitivity_plasmid_coordinates": [
+      823,
+      1491
+    ],
+    "ires_sensitivity_mature_coordinates": [
+      101,
+      769
+    ],
+    "ires_sensitivity_length_nt": 669
+  },
+  "sequence_checksums": {
+    "plasmid_md5": "7f393c7e56a2a20fc2a1ddba5c43eb8f",
+    "mature_circle_md5": "f10fd90bcd66fde2c63e069eb6792aaa",
+    "cds_md5": "555b40d1e9cecab8938a13f260ff24ee",
+    "protein_md5": "1f30d1e027dd7b5722eaaec994587fcd"
+  },
+  "benchmark_design": {
+    "human_weighted_n": 96,
+    "uniform_synonymous_n": 96,
+    "composition_shuffle_n": 64,
+    "random_total_n": 256,
+    "bounding_controls": [
+      "cai_max",
+      "cai_min",
+      "gc3_high",
+      "gc3_low"
+    ],
+    "all_candidates_with_original_n": 261
+  },
+  "ires_references": {
+    "primary_666nt": {
+      "ensemble_free_energy_kcal_mol": -229.27284240722656,
+      "retained_pairs": 4626,
+      "elapsed_seconds": 15.31614637374878
+    },
+    "sensitivity_669nt": {
+      "ensemble_free_energy_kcal_mol": -232.08175659179688,
+      "retained_pairs": 4648,
+      "elapsed_seconds": 15.37209177017212
+    },
+    "definition": "circular full-length partition function with every non-IRES nucleotide forced unpaired"
+  },
+  "current_metrics": {
+    "circular_mfe_kcal_mol": -779.4000244140625,
+    "circular_mfe_per_100nt": -38.71833206229819,
+    "ensemble_free_energy_kcal_mol": -811.5098266601562,
+    "human_cai": 0.8110396713611927,
+    "mature_gc_fraction": 0.5409836065573771,
+    "cds_gc_fraction": 0.5946445060018467,
+    "cds_gc3_fraction": 0.6611111111111111,
+    "lires": 11.954030649650369,
+    "lires_internal": 8.025102751226552,
+    "lires_crosstalk": 8.859829265004851,
+    "ires_cross_pair_probability_mass": 62.01315115075431,
+    "lires_ires669": 11.227883639811877,
+    "lires_internal_ires669": 6.843754621209721,
+    "lires_crosstalk_ires669": 8.90103329472628
+  },
+  "percentiles": {
+    "all_random": {
+      "circular_mfe": {
+        "percentile": 95.703125,
+        "ci95_low": 92.47089445363343,
+        "ci95_high": 97.58401866993924,
+        "n": 256,
+        "worse": 245,
+        "ties": 0
+      },
+      "human_cai": {
+        "percentile": 87.5,
+        "ci95_low": 82.8863940867439,
+        "ci95_high": 91.00481668131573,
+        "n": 256,
+        "worse": 192,
+        "ties": 64
+      },
+      "ires_deviation": {
+        "percentile": 69.140625,
+        "ci95_low": 63.234179746387454,
+        "ci95_high": 74.48112574980965,
+        "n": 256,
+        "worse": 177,
+        "ties": 0
+      },
+      "ires_deviation_669": {
+        "percentile": 71.484375,
+        "ci95_low": 65.6679699094645,
+        "ci95_high": 76.66553625973633,
+        "n": 256,
+        "worse": 183,
+        "ties": 0
+      }
+    },
+    "human_weighted": {
+      "circular_mfe": {
+        "percentile": 97.91666666666666,
+        "ci95_low": 92.7192864822158,
+        "ci95_high": 99.42680301475697,
+        "n": 96,
+        "worse": 94,
+        "ties": 0
+      },
+      "human_cai": {
+        "percentile": 100.0,
+        "ci95_low": 96.15244121423243,
+        "ci95_high": 100.0,
+        "n": 96,
+        "worse": 96,
+        "ties": 0
+      },
+      "ires_deviation": {
+        "percentile": 68.75,
+        "ci95_low": 58.90812009308731,
+        "ci95_high": 77.14904536224985,
+        "n": 96,
+        "worse": 66,
+        "ties": 0
+      },
+      "ires_deviation_669": {
+        "percentile": 72.91666666666666,
+        "ci95_low": 63.27365269279848,
+        "ci95_high": 80.79621619705807,
+        "n": 96,
+        "worse": 70,
+        "ties": 0
+      }
+    },
+    "uniform": {
+      "circular_mfe": {
+        "percentile": 100.0,
+        "ci95_low": 96.15244121423243,
+        "ci95_high": 100.0,
+        "n": 96,
+        "worse": 96,
+        "ties": 0
+      },
+      "human_cai": {
+        "percentile": 100.0,
+        "ci95_low": 96.15244121423243,
+        "ci95_high": 100.0,
+        "n": 96,
+        "worse": 96,
+        "ties": 0
+      },
+      "ires_deviation": {
+        "percentile": 83.33333333333334,
+        "ci95_low": 74.62900984810511,
+        "ci95_high": 89.47261762804989,
+        "n": 96,
+        "worse": 80,
+        "ties": 0
+      },
+      "ires_deviation_669": {
+        "percentile": 84.375,
+        "ci95_low": 75.80851332547138,
+        "ci95_high": 90.29629000931342,
+        "n": 96,
+        "worse": 81,
+        "ties": 0
+      }
+    },
+    "composition_shuffle": {
+      "circular_mfe": {
+        "percentile": 85.9375,
+        "ci95_low": 75.38371825842297,
+        "ci95_high": 92.42142744396914,
+        "n": 64,
+        "worse": 55,
+        "ties": 0
+      },
+      "human_cai": {
+        "percentile": 50.0,
+        "ci95_low": 38.10209474394701,
+        "ci95_high": 61.89790525605299,
+        "n": 64,
+        "worse": 0,
+        "ties": 64
+      },
+      "ires_deviation": {
+        "percentile": 48.4375,
+        "ci95_low": 36.63355166543264,
+        "ci95_high": 60.41839852141988,
+        "n": 64,
+        "worse": 31,
+        "ties": 0
+      },
+      "ires_deviation_669": {
+        "percentile": 50.0,
+        "ci95_low": 38.10209474394701,
+        "ci95_high": 61.89790525605299,
+        "n": 64,
+        "worse": 32,
+        "ties": 0
+      }
+    }
+  },
+  "ensemble_descriptives": {
+    "all_random": {
+      "circular_mfe_kcal_mol": {
+        "min": -783.5999755859375,
+        "q1": -757.9999847412109,
+        "median": -743.75,
+        "q3": -725.9749755859375,
+        "max": -693.5,
+        "mean": -742.6222651004791,
+        "sd": 21.073153839290093
+      },
+      "human_cai": {
+        "min": 0.6347324427054748,
+        "q1": 0.667939459321969,
+        "median": 0.748774170204099,
+        "q3": 0.7898862611735156,
+        "max": 0.8110396713611927,
+        "mean": 0.7346754669833209,
+        "sd": 0.06131044557792931
+      },
+      "lires": {
+        "min": 6.435835466588142,
+        "q1": 11.379849635932672,
+        "median": 13.759485009119492,
+        "q3": 15.661184240080622,
+        "max": 21.389457378674724,
+        "mean": 13.48548149571431,
+        "sd": 3.19216637380168
+      },
+      "lires_ires669": {
+        "min": 4.784389415840375,
+        "q1": 10.837167523064407,
+        "median": 13.376246953095986,
+        "q3": 15.397380850200536,
+        "max": 21.151053072358643,
+        "mean": 13.100984950114224,
+        "sd": 3.3345276413998715
+      }
+    },
+    "human_weighted": {
+      "circular_mfe_kcal_mol": {
+        "min": -781.2000122070312,
+        "q1": -753.5000152587891,
+        "median": -746.7000122070312,
+        "q3": -740.9250030517578,
+        "max": -719.5999755859375,
+        "mean": -748.5114580790201,
+        "sd": 11.135465843287763
+      },
+      "human_cai": {
+        "min": 0.7286538049383282,
+        "q1": 0.7474046087669222,
+        "median": 0.7561845585552307,
+        "q3": 0.7665404357347629,
+        "max": 0.7828351244442899,
+        "mean": 0.7563462151727184,
+        "sd": 0.012721928237116332
+      },
+      "lires": {
+        "min": 6.457988587271188,
+        "q1": 11.567433579182845,
+        "median": 13.742335392327142,
+        "q3": 15.818418455978602,
+        "max": 21.20223844320394,
+        "mean": 13.484268759223747,
+        "sd": 3.1486114736230078
+      },
+      "lires_ires669": {
+        "min": 5.353872028168271,
+        "q1": 11.111427117321961,
+        "median": 13.115522913414818,
+        "q3": 15.415042388705931,
+        "max": 21.151053072358643,
+        "mean": 13.129589819927967,
+        "sd": 3.280118845948244
+      }
+    },
+    "uniform": {
+      "circular_mfe_kcal_mol": {
+        "min": -755.5,
+        "q1": -730.1499938964844,
+        "median": -721.6999816894531,
+        "q3": -712.7749938964844,
+        "max": -693.5,
+        "mean": -721.2708326975504,
+        "sd": 12.1346337318483
+      },
+      "human_cai": {
+        "min": 0.6347324427054748,
+        "q1": 0.6524507795193444,
+        "median": 0.6617307165863355,
+        "q3": 0.6702518545956675,
+        "max": 0.7055619727245738,
+        "mean": 0.6620952492086754,
+        "sd": 0.014196242415772374
+      },
+      "lires": {
+        "min": 6.435835466588142,
+        "q1": 12.919514510199662,
+        "median": 14.64565736278957,
+        "q3": 16.533061095281127,
+        "max": 21.389457378674724,
+        "mean": 14.532176951548884,
+        "sd": 3.1146396954362534
+      },
+      "lires_ires669": {
+        "min": 4.784389415840375,
+        "q1": 12.480532033464318,
+        "median": 14.148368429002012,
+        "q3": 16.22841822021698,
+        "max": 21.026667382261355,
+        "mean": 14.148067225775444,
+        "sd": 3.236688954565482
+      }
+    },
+    "composition_shuffle": {
+      "circular_mfe_kcal_mol": {
+        "min": -783.5999755859375,
+        "q1": -774.4500122070312,
+        "median": -765.25,
+        "q3": -756.9499969482422,
+        "max": -749.7999877929688,
+        "mean": -765.8156242370605,
+        "sd": 9.717669517069874
+      },
+      "human_cai": {
+        "min": 0.8110396713611927,
+        "q1": 0.8110396713611927,
+        "median": 0.8110396713611927,
+        "q3": 0.8110396713611927,
+        "max": 0.8110396713611927,
+        "mean": 0.8110396713611926,
+        "sd": 1.1189996278004203e-16
+      },
+      "lires": {
+        "min": 6.50635166255562,
+        "q1": 9.744988912068413,
+        "median": 11.794547000952823,
+        "q3": 14.385441196126429,
+        "max": 18.646663281746715,
+        "mean": 11.917257416698295,
+        "sd": 2.738495337413331
+      },
+      "lires_ires669": {
+        "min": 5.5046120215434025,
+        "q1": 9.381114366218263,
+        "median": 11.231215751202948,
+        "q3": 13.88798318604993,
+        "max": 17.934081333969655,
+        "mean": 11.487454231901776,
+        "sd": 2.944063786699408
+      }
+    }
+  },
+  "pareto": {
+    "current_layer": 4,
+    "current_on_front": false,
+    "all_dominators_count": 5,
+    "all_dominators": [
+      "composition_shuffle_011",
+      "composition_shuffle_027",
+      "composition_shuffle_052",
+      "composition_shuffle_055",
+      "composition_shuffle_056"
+    ],
+    "random_dominators_count": 5,
+    "random_dominators": [
+      "composition_shuffle_011",
+      "composition_shuffle_027",
+      "composition_shuffle_052",
+      "composition_shuffle_055",
+      "composition_shuffle_056"
+    ],
+    "random_domination_fraction": 0.01953125,
+    "dominator_details": [
+      {
+        "candidate_id": "composition_shuffle_011",
+        "ensemble": "composition_shuffle",
+        "circular_mfe_kcal_mol": -783.2000122070312,
+        "human_cai": 0.8110396713611927,
+        "lires": 11.171568297252277,
+        "lires_ires669": 11.68288521935204,
+        "mfe_improvement_percent": 0.4875529476439914,
+        "lires_improvement_percent": 6.545594329900578
+      },
+      {
+        "candidate_id": "composition_shuffle_027",
+        "ensemble": "composition_shuffle",
+        "circular_mfe_kcal_mol": -781.5999755859375,
+        "human_cai": 0.8110396713611927,
+        "lires": 11.306563197669076,
+        "lires_ires669": 10.575381645317792,
+        "mfe_improvement_percent": 0.2822621379219073,
+        "lires_improvement_percent": 5.416310790538498
+      },
+      {
+        "candidate_id": "composition_shuffle_052",
+        "ensemble": "composition_shuffle",
+        "circular_mfe_kcal_mol": -779.7999877929688,
+        "human_cai": 0.8110396713611927,
+        "lires": 11.57625892600582,
+        "lires_ires669": 10.8066722555979,
+        "mfe_improvement_percent": 0.051316829147771005,
+        "lires_improvement_percent": 3.1602037397787415
+      },
+      {
+        "candidate_id": "composition_shuffle_055",
+        "ensemble": "composition_shuffle",
+        "circular_mfe_kcal_mol": -781.0999755859375,
+        "human_cai": 0.8110396713611927,
+        "lires": 7.79014639606695,
+        "lires_ires669": 6.99858089717561,
+        "mfe_improvement_percent": 0.2181102282044435,
+        "lires_improvement_percent": 34.83247095158823
+      },
+      {
+        "candidate_id": "composition_shuffle_056",
+        "ensemble": "composition_shuffle",
+        "circular_mfe_kcal_mol": -780.9000244140625,
+        "human_cai": 0.8110396713611927,
+        "lires": 11.598963889904306,
+        "lires_ires669": 10.830402275477706,
+        "mfe_improvement_percent": 0.1924557291523913,
+        "lires_improvement_percent": 2.970268105816237
+      }
+    ]
+  },
+  "pareto_sensitivity_669nt": {
+    "current_layer": 3,
+    "current_on_front": false,
+    "all_dominators_count": 4,
+    "all_dominators": [
+      "composition_shuffle_027",
+      "composition_shuffle_052",
+      "composition_shuffle_055",
+      "composition_shuffle_056"
+    ],
+    "random_dominators_count": 4,
+    "random_dominators": [
+      "composition_shuffle_027",
+      "composition_shuffle_052",
+      "composition_shuffle_055",
+      "composition_shuffle_056"
+    ],
+    "random_domination_fraction": 0.015625
+  },
+  "boundary_sensitivity": {
+    "ires_integrity_percentile_666nt": 69.140625,
+    "ires_integrity_percentile_669nt": 71.484375,
+    "absolute_percentile_change": 2.34375,
+    "robust_within_10_percentile_points": true
+  },
+  "decision": {
+    "code": "retain_supported",
+    "conclusion_cn": "计算结果支持保留现有 Combined 构建",
+    "rubric": {
+      "strong_retain": "CAI >= 0.80; every core percentile >= 25; at least two >= 50; <=5% random candidates dominate",
+      "retain_with_tradeoff": "CAI >= 0.75; every core percentile >= 15; <=10% random candidates dominate",
+      "status": "project-defined retrospective rule, not an official circDesign threshold"
+    }
+  },
+  "limitations": [
+    "This is an independent circDesign-inspired retrospective implementation, not the unpublished original production code.",
+    "MFE and base-pairing probabilities are thermodynamic predictions and do not directly prove cellular half-life or translation.",
+    "CAI uses the Kazusa general Homo sapiens codon-usage table, not a tissue-specific tRNA model.",
+    "Base-pairing probabilities below the recorded cutoff are omitted from the sparse L2 calculation; their squared contribution is negligible but nonzero.",
+    "The mature-circle boundary is inferred from retained-scar annotations and should be confirmed by junction sequencing for experimental identity."
+  ]
+}

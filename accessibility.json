@@ -1,0 +1,96 @@
+{
+  "what": "RNA accessibility, pre-registered windows",
+  "pre_registration": {
+    "windows_mature_1based": {
+      "TIR": [
+        782,
+        811
+      ],
+      "SPACER": [
+        767,
+        781
+      ],
+      "CDS": [
+        782,
+        1864
+      ],
+      "IRES": [
+        101,
+        766
+      ]
+    },
+    "direction": {
+      "acc_TIR": 1,
+      "acc_SPACER": 1,
+      "acc_CDS": 1,
+      "acc_IRES": 0,
+      "longest_helix": -1,
+      "structured_frac_CDS": -1
+    },
+    "background_sample_seed": 20260804,
+    "n_background": 250,
+    "n_dominators": 58,
+    "mechanism": "ribosome loading and elongation; long duplexes drive PKR"
+  },
+  "construct_vs_background": {
+    "acc_TIR": {
+      "construct": 0.2116298530330217,
+      "background_median": 0.2863421643678521,
+      "background_mean": 0.2880887383196947,
+      "background_sd": 0.07657584434509924,
+      "percentile": 82.8,
+      "direction": 1
+    },
+    "acc_SPACER": {
+      "construct": 0.4086897055160686,
+      "background_median": 0.35397651324941154,
+      "background_mean": 0.326037372321546,
+      "background_sd": 0.09667879752096757,
+      "percentile": 8.8,
+      "direction": 1
+    },
+    "acc_CDS": {
+      "construct": 0.34011217447907477,
+      "background_median": 0.3451283864762327,
+      "background_mean": 0.34530517283020334,
+      "background_sd": 0.010572435186897329,
+      "percentile": 66.8,
+      "direction": 1
+    },
+    "acc_IRES": {
+      "construct": 0.3726861077452504,
+      "background_median": 0.36898378894164274,
+      "background_mean": 0.3678855981453431,
+      "background_sd": 0.01136839255699983,
+      "percentile": NaN,
+      "direction": 0
+    },
+    "longest_helix": {
+      "construct": 20.0,
+      "background_median": 20.0,
+      "background_mean": 19.988,
+      "background_sd": 0.18973665961010283,
+      "percentile": 0.4,
+      "direction": -1
+    }
+  },
+  "dominators_vs_background": {
+    "acc_TIR": {
+      "p_two_sided": 0.20235613065476377,
+      "p_dominator_worse": 0.899111307578348
+    },
+    "acc_SPACER": {
+      "p_two_sided": 0.6084843276626017,
+      "p_dominator_worse": 0.30424216383130087
+    },
+    "acc_CDS": {
+      "p_two_sided": 0.008960427551614724,
+      "p_dominator_worse": 0.004480213775807362
+    },
+    "longest_helix": {
+      "p_two_sided": 0.6359569079420124,
+      "p_dominator_worse": 0.3179784539710062
+    }
+  },
+  "expected_false_positives_at_0.05": 0.2
+}

@@ -1,0 +1,77 @@
+{
+  "what": "accessibility panel as a fourth objective group",
+  "objective_set": [
+    "acc_TIR",
+    "acc_SPACER",
+    "acc_CDS",
+    "longest_helix"
+  ],
+  "directions": {
+    "acc_TIR": "higher",
+    "acc_SPACER": "higher",
+    "acc_CDS": "higher",
+    "longest_helix": "lower"
+  },
+  "construct_accessibility": {
+    "acc_TIR": 0.2116298530330217,
+    "acc_SPACER": 0.4086897055160686,
+    "acc_CDS": 0.3401121744790747,
+    "longest_helix": 20.0
+  },
+  "construct_position": {
+    "acc_TIR": {
+      "label": "TIR 翻译起始区可及性",
+      "construct": 0.2116298530330217,
+      "background_median": 0.2863421643678521,
+      "background_sd": 0.07657584434509926,
+      "percent_better_than_construct": 82.8,
+      "direction": "higher_is_better"
+    },
+    "acc_SPACER": {
+      "label": "间隔区可及性",
+      "construct": 0.4086897055160686,
+      "background_median": 0.35397651324941154,
+      "background_sd": 0.09667879752096757,
+      "percent_better_than_construct": 8.799999999999999,
+      "direction": "higher_is_better"
+    },
+    "acc_CDS": {
+      "label": "CDS 全局可及性",
+      "construct": 0.3401121744790747,
+      "background_median": 0.34512838647623256,
+      "background_sd": 0.010572435186897334,
+      "percent_better_than_construct": 66.8,
+      "direction": "higher_is_better"
+    },
+    "longest_helix": {
+      "label": "最长螺旋长度",
+      "construct": 20.0,
+      "background_median": 20.0,
+      "background_sd": 0.18973665961010283,
+      "percent_better_than_construct": 0.4,
+      "direction": "lower_is_better"
+    }
+  },
+  "n_buildable": 1553,
+  "n_all_candidates": 4000,
+  "dominators_three_objective": 30,
+  "dominators_full_objective": 0,
+  "domination_rate_three_objective_percent": 1.931745009658725,
+  "domination_rate_full_objective_percent": 0.0,
+  "dominators_all_three_objective": 58,
+  "dominators_all_full_objective": 0,
+  "domination_rate_all_three_percent": 1.45,
+  "domination_rate_all_full_percent": 0.0,
+  "preferential_test": {
+    "dominators_pass_percent": 0.0,
+    "background_pass_percent": 6.0,
+    "fisher_p": 0.3827725057823209,
+    "significant": false,
+    "interpretation": "not significant -- the reduction in dominance is the mechanical consequence of enlarging the objective set, not evidence that the added objectives single out the competitors"
+  },
+  "disclosures_required": [
+    "the accessibility group is a fourth objective group added after the three-objective front was known; it needs out-of-sample replication",
+    "the construct ranks behind the background median on three of the four accessibility metrics, so the objective does not favour it in absolute terms",
+    "Pareto optimality does not require being best on any single objective; the construct is not top-ranked on any one of the seven"
+  ]
+}

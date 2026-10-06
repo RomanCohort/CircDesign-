@@ -1,0 +1,26 @@
+feature,plasmid_start,plasmid_end,mature_start,mature_end,length_nt,type
+tPA signal/pro sequence,1504,1599,782,877,96,sig_peptide
+Kozak sequence,1498,1507,776,785,10,regulatory
+HBA1 full 3' UTR,2612,2693,1890,1971,82,misc_feature
+T4td DS intron retained,2714,2735,1992,2013,22,misc_feature
+T4td US intron retained,723,746,1,24,24,misc_feature
+PABPspacer50v3,767,816,45,94,50,misc_feature
+synIRES-RC25,823,1488,101,766,666,misc_feature
+Human rhinovirus 3 5' UTR IRES,823,1491,101,769,669,misc_feature
+Intron Scar 1,2714,2735,1992,2013,22,misc_feature
+Intron Scar 2,723,746,1,24,24,misc_feature
+HBA1 full 3' UTR,2593,2611,1871,1889,19,misc_feature
+FLAG,2560,2583,1838,1861,24,CDS
+MITD,2386,2550,1664,1828,165,misc_feature
+mC3dP28-1,1963,2052,1241,1330,90,CDS
+mC3dP28-2,2068,2157,1346,1435,90,misc_feature
+mC3dP28-4,2281,2370,1559,1648,90,misc_feature
+mC3dP28-3,2176,2265,1454,1543,90,misc_feature
+TROP2 CTL1,1606,1632,884,910,27,misc_feature
+TROP2 CTL2,1648,1674,926,952,27,misc_feature
+B7H4 CTL1,1690,1716,968,994,27,misc_feature
+B7H4 CTL2,1732,1758,1010,1036,27,misc_feature
+Nectin4 CTL1,1774,1815,1052,1093,42,misc_feature
+Nectin4 CTL2,1831,1857,1109,1135,27,misc_feature
+LIV-1 CTL2,1873,1899,1151,1177,27,misc_feature
+LIV-1 CTL3,1915,1941,1193,1219,27,misc_feature

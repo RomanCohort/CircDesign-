@@ -1,0 +1,15 @@
+# 本地/工具
+.claude/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Office / 网盘 临时文件
+~$*.docx
+~$*.xlsx
+*.baiduyun.uploading.cfg
+*.cfg
+*.tmp
+
+# 旧版报告（含已更正的分析错误，不应公开发布）
+_backup_原版报告_Aug5.docx

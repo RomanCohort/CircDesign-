@@ -1,0 +1,344 @@
+{
+  "what": "arrangement-space geometry of the dominators",
+  "embedding": "codon-pair count matrix minus its exact expectation under a uniformly random permutation of the same codon multiset",
+  "n_candidates": 4000,
+  "n_dominators": 58,
+  "construct_position": {
+    "median_distance": 15.563446566319278,
+    "percentile_of_distance": 50.0,
+    "nearest_20_range": [
+      10.42048658996883,
+      11.36525504087159
+    ]
+  },
+  "explained_variance_first_20": [
+    0.015940235955614973,
+    0.013149707020048137,
+    0.013072187010849865,
+    0.012048783403337223,
+    0.011594350795179106,
+    0.010720032020816884,
+    0.010650365164391776,
+    0.01038819327749012,
+    0.010131419777022258,
+    0.00980786223277911,
+    0.009044780464637178,
+    0.008810267265393454,
+    0.00854013417451156,
+    0.008166754102871071,
+    0.00796162597179519,
+    0.007739432169238848,
+    0.00749834155509597,
+    0.007240428174516595,
+    0.007160098900663754,
+    0.007012034414599822
+  ],
+  "cluster_scan": {
+    "2": {
+      "chi2_p": 0.03949042610231732,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 22,
+          "n": 2088,
+          "rate_percent": 1.053639846743295
+        },
+        "1": {
+          "dominators": 36,
+          "n": 1912,
+          "rate_percent": 1.8828451882845187
+        }
+      }
+    },
+    "3": {
+      "chi2_p": 0.22838780952971982,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 14,
+          "n": 1291,
+          "rate_percent": 1.0844306738962044
+        },
+        "1": {
+          "dominators": 19,
+          "n": 1377,
+          "rate_percent": 1.3798111837327525
+        },
+        "2": {
+          "dominators": 25,
+          "n": 1332,
+          "rate_percent": 1.8768768768768769
+        }
+      }
+    },
+    "4": {
+      "chi2_p": 0.11248391109300451,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 15,
+          "n": 985,
+          "rate_percent": 1.5228426395939085
+        },
+        "1": {
+          "dominators": 8,
+          "n": 1056,
+          "rate_percent": 0.7575757575757576
+        },
+        "2": {
+          "dominators": 15,
+          "n": 976,
+          "rate_percent": 1.5368852459016393
+        },
+        "3": {
+          "dominators": 20,
+          "n": 983,
+          "rate_percent": 2.034587995930824
+        }
+      }
+    },
+    "5": {
+      "chi2_p": 0.2255605495961367,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 12,
+          "n": 801,
+          "rate_percent": 1.4981273408239701
+        },
+        "1": {
+          "dominators": 18,
+          "n": 815,
+          "rate_percent": 2.208588957055215
+        },
+        "2": {
+          "dominators": 12,
+          "n": 783,
+          "rate_percent": 1.5325670498084292
+        },
+        "3": {
+          "dominators": 7,
+          "n": 758,
+          "rate_percent": 0.9234828496042217
+        },
+        "4": {
+          "dominators": 9,
+          "n": 843,
+          "rate_percent": 1.0676156583629892
+        }
+      }
+    },
+    "6": {
+      "chi2_p": 0.12442591490112175,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 10,
+          "n": 676,
+          "rate_percent": 1.4792899408284024
+        },
+        "1": {
+          "dominators": 10,
+          "n": 745,
+          "rate_percent": 1.342281879194631
+        },
+        "2": {
+          "dominators": 8,
+          "n": 661,
+          "rate_percent": 1.2102874432677762
+        },
+        "3": {
+          "dominators": 9,
+          "n": 636,
+          "rate_percent": 1.4150943396226414
+        },
+        "4": {
+          "dominators": 17,
+          "n": 669,
+          "rate_percent": 2.5411061285500747
+        },
+        "5": {
+          "dominators": 4,
+          "n": 613,
+          "rate_percent": 0.6525285481239804
+        }
+      }
+    },
+    "8": {
+      "chi2_p": 0.4254476739525874,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 6,
+          "n": 471,
+          "rate_percent": 1.2738853503184713
+        },
+        "1": {
+          "dominators": 7,
+          "n": 510,
+          "rate_percent": 1.3725490196078431
+        },
+        "2": {
+          "dominators": 9,
+          "n": 447,
+          "rate_percent": 2.0134228187919465
+        },
+        "3": {
+          "dominators": 7,
+          "n": 494,
+          "rate_percent": 1.417004048582996
+        },
+        "4": {
+          "dominators": 10,
+          "n": 559,
+          "rate_percent": 1.7889087656529516
+        },
+        "5": {
+          "dominators": 11,
+          "n": 492,
+          "rate_percent": 2.2357723577235773
+        },
+        "6": {
+          "dominators": 5,
+          "n": 564,
+          "rate_percent": 0.8865248226950354
+        },
+        "7": {
+          "dominators": 3,
+          "n": 463,
+          "rate_percent": 0.6479481641468683
+        }
+      }
+    },
+    "10": {
+      "chi2_p": 0.11336072280904502,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 12,
+          "n": 457,
+          "rate_percent": 2.62582056892779
+        },
+        "1": {
+          "dominators": 4,
+          "n": 394,
+          "rate_percent": 1.015228426395939
+        },
+        "2": {
+          "dominators": 4,
+          "n": 402,
+          "rate_percent": 0.9950248756218906
+        },
+        "3": {
+          "dominators": 9,
+          "n": 395,
+          "rate_percent": 2.278481012658228
+        },
+        "4": {
+          "dominators": 6,
+          "n": 413,
+          "rate_percent": 1.4527845036319613
+        },
+        "5": {
+          "dominators": 4,
+          "n": 356,
+          "rate_percent": 1.1235955056179776
+        },
+        "6": {
+          "dominators": 6,
+          "n": 414,
+          "rate_percent": 1.4492753623188406
+        },
+        "7": {
+          "dominators": 6,
+          "n": 363,
+          "rate_percent": 1.6528925619834711
+        },
+        "8": {
+          "dominators": 0,
+          "n": 417,
+          "rate_percent": 0.0
+        },
+        "9": {
+          "dominators": 7,
+          "n": 389,
+          "rate_percent": 1.7994858611825193
+        }
+      }
+    },
+    "12": {
+      "chi2_p": 0.035594055872058356,
+      "overall_rate_percent": 1.4500000000000002,
+      "clusters": {
+        "0": {
+          "dominators": 6,
+          "n": 312,
+          "rate_percent": 1.9230769230769231
+        },
+        "1": {
+          "dominators": 5,
+          "n": 341,
+          "rate_percent": 1.466275659824047
+        },
+        "2": {
+          "dominators": 2,
+          "n": 322,
+          "rate_percent": 0.6211180124223602
+        },
+        "3": {
+          "dominators": 8,
+          "n": 317,
+          "rate_percent": 2.5236593059936907
+        },
+        "4": {
+          "dominators": 4,
+          "n": 321,
+          "rate_percent": 1.2461059190031152
+        },
+        "5": {
+          "dominators": 9,
+          "n": 304,
+          "rate_percent": 2.960526315789474
+        },
+        "6": {
+          "dominators": 8,
+          "n": 335,
+          "rate_percent": 2.388059701492537
+        },
+        "7": {
+          "dominators": 5,
+          "n": 374,
+          "rate_percent": 1.3368983957219251
+        },
+        "8": {
+          "dominators": 7,
+          "n": 341,
+          "rate_percent": 2.0527859237536656
+        },
+        "9": {
+          "dominators": 2,
+          "n": 353,
+          "rate_percent": 0.56657223796034
+        },
+        "10": {
+          "dominators": 1,
+          "n": 330,
+          "rate_percent": 0.30303030303030304
+        },
+        "11": {
+          "dominators": 1,
+          "n": 350,
+          "rate_percent": 0.2857142857142857
+        }
+      }
+    }
+  },
+  "component_vs_folding": {},
+  "dominator_spread": {
+    "observed": 6.8699541186583915,
+    "null_mean": 6.8486231960358905,
+    "null_sd": 0.13883314655607623,
+    "z": 0.15364430722518502,
+    "p_tighter": 0.5655
+  }
+}

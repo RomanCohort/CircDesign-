@@ -1,0 +1,29 @@
+{
+  "pre_registration": {
+    "n_requested": 2000,
+    "seed_offset": 4242,
+    "correctness_filter": "splice_donors == 0 and polya_signals == 0",
+    "objectives": [
+      "circular MFE (down)",
+      "IRES native recall (up)"
+    ],
+    "decision_rule": "<=2 dominators among >=500 passing AND upper 95% bound < 2%"
+  },
+  "construct": {
+    "mfe": -779.4000244140625,
+    "ires_recall": 0.7956989247311828,
+    "reference_ires_pairs": 186
+  },
+  "n_generated": 2000,
+  "n_correctness_passing": 793,
+  "n_mfe_competitive": 107,
+  "dominators_all": 32,
+  "dominators_correctness_passing": 20,
+  "rate_all_percent": 1.6,
+  "rate_passing_percent": 2.5220680958385877,
+  "ci_passing_percent": [
+    1.6384754819701315,
+    3.8634461044530664
+  ],
+  "supported": false
+}

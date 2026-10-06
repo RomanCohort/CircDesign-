@@ -1,0 +1,49 @@
+{
+  "what": "3-D realised base pairs vs 2-D circular MFE prediction, same 2013 nt construct",
+  "source_3d": "C:\\baidunetdiskdownload\\torusfold-hybrid\\artifacts\\2013nt\\isrnaclong_final.pdb",
+  "source_2d": "combined_circular_MFE_structure.dbn",
+  "sequence_identical": true,
+  "criteria": {
+    "hbond_max_angstrom": 3.6,
+    "base_ref_max_angstrom": 12.0,
+    "min_hbonds": 2,
+    "base_ref_atom": {
+      "A": "N9",
+      "G": "N9",
+      "C": "N1",
+      "U": "N1"
+    }
+  },
+  "overall": {
+    "2d_pairs_total": 658,
+    "3d_pairs_total": 6,
+    "agreed": 0,
+    "only_in_2d": 658,
+    "only_in_3d": 6,
+    "agreement_over_union_jaccard": 0.0
+  },
+  "per_region": {
+    "IRES 666 (101-766)": {
+      "2d_pairs": 181,
+      "3d_pairs": 0,
+      "agreed": 0,
+      "sensitivity_3d_recovers_2d": 0.0,
+      "ppv_2d_pairs_realised_in_3d": null
+    },
+    "IRES 669 (101-769)": {
+      "2d_pairs": 183,
+      "3d_pairs": 0,
+      "agreed": 0,
+      "sensitivity_3d_recovers_2d": 0.0,
+      "ppv_2d_pairs_realised_in_3d": null
+    },
+    "CDS (782-1864)": {
+      "2d_pairs": 328,
+      "3d_pairs": 3,
+      "agreed": 0,
+      "sensitivity_3d_recovers_2d": 0.0,
+      "ppv_2d_pairs_realised_in_3d": 0.0
+    }
+  },
+  "bsj_closure_angstrom": 14.014984302524223
+}

@@ -1,0 +1,135 @@
+{
+  "script": "boundary_test.py",
+  "inputs": {
+    "csv": "candidate_metrics.csv",
+    "n_total": 261,
+    "n_random_synonymous": 256,
+    "n_bounding_control": 4,
+    "n_original": 1,
+    "random_ensembles": [
+      "human_weighted",
+      "uniform",
+      "composition_shuffle"
+    ],
+    "columns_compared": [
+      "lires (666 nt)",
+      "lires_ires669 (669 nt)"
+    ]
+  },
+  "b_correlation": {
+    "pearson_r": 0.9921527822758479,
+    "pearson_p": 2.214930174303195e-231,
+    "spearman_rho": 0.9919747081712061,
+    "spearman_p": 3.7856340628795187e-230,
+    "spearman_r_squared": 0.9840138216513495,
+    "n": 256,
+    "note": "n = 256 random synonymous candidates; 1 - rho^2 = 0.01599 of rank variance is window-specific."
+  },
+  "b_status_flips": {
+    "definition": "'worse than original' = lires strictly greater than the original's lires",
+    "better_under_666_only": 0,
+    "better_under_669_only": 6,
+    "total_status_flips_n": 6,
+    "total_status_flips_of_256_pct": 2.34375,
+    "ties_666nt": 0,
+    "ties_669nt": 0,
+    "total_status_flips_all_261": 7
+  },
+  "c_paired_test": {
+    "d_definition": "d_i = [lires_i > lires_original]_666 - [lires_ires669_i > lires_ires669_original]",
+    "orientation": "higher lires = worse; mean(d) = (pct_666 - pct_669)/100",
+    "n": 256,
+    "n_discordant": 6,
+    "discordant_flipping_to_better_under_669": 0,
+    "discordant_flipping_to_worse_under_669": 6,
+    "mean_d": -0.0234375,
+    "mean_d_percentile_points": -2.34375,
+    "sd_d": 0.15158476564770812,
+    "se_d": 0.009474047852981757,
+    "se_d_percentile_points": 0.9474047852981757,
+    "ci95_low": -0.04200629257965327,
+    "ci95_high": -0.0048687074203467295,
+    "ci95_low_percentile_points": -4.200629257965327,
+    "ci95_high_percentile_points": -0.48687074203467295,
+    "ci95_excludes_zero": true,
+    "exact_sign_test_p": 0.03125,
+    "identity_check_mean_d_x100_vs_pct_diff": {
+      "mean_d_x100": -2.34375,
+      "pct_666_minus_pct_669": -2.34375,
+      "match": true
+    },
+    "bootstrap_ci95_pct_points": [
+      -4.296875,
+      -0.78125
+    ],
+    "bootstrap_note": "20000 candidate-resamples, seed 20260804 -- estimated, not measured"
+  },
+  "d_power_of_report_rule": {
+    "rule": "robust_within_10_percentile_points = |observed delta| <= 10.0",
+    "rule_input": "point estimate only, no uncertainty",
+    "observed_delta_pp": -2.34375,
+    "observed_delta_as_fraction_of_threshold": 0.234375,
+    "paired_se_pp": 0.9474047852981757,
+    "min_true_delta_detectable_at_80pct_power_n256_pp": 2.6542352420608593,
+    "power_to_detect_true_10pp_difference": 1.0,
+    "n_required_for_10pp_mde_pp": 18.035109683706544,
+    "n_required_note": "ESTIMATE. n = (z_0.975 + z_0.80)^2 * sd(d)^2 / (0.10)^2 using the observed sd(d). It assumes sd(d) does not change with n, which is false in practice: sd(d) is driven by the discordance rate, which itself grows with the size of the window perturbation. Treat as an order-of-magnitude scale, not a design.",
+    "upper_95pct_bound_on_true_delta_pp": 0.48687074203467295,
+    "cannot_fail_analysis": "Partly true, but NOT for the reason of low power. With SE = 0.947 pp the rule has power ~1.0000 to detect a true 10 pp violation, so the rule is not underpowered -- it would fail if the windows genuinely disagreed by >10 pp. It 'cannot fail' only because the perturbation is 3 nt (0.45% of the window): a change that small cannot move a rank by 26 candidate slots (10 pp of 256). The report supplies no calibration of how the rank effect scales with window length, so passing the rule does not establish robustness to window choice in general.",
+    "observed_delta_is_itself_significant": true,
+    "significant_note": "The paired shift is small but real: the 95% CI on the true difference [-4.20, -0.49] pp excludes 0 and the exact sign test gives p = 0.0312. 'Robust' here means 'below an arbitrary 10 pp tolerance', not 'no effect'."
+  },
+  "e_perturbation_size": {
+    "nucleotides_differing": 3,
+    "where": "3 nt appended at the 3' end of the window (mature 767-769)",
+    "fraction_of_666nt_window_pct": 0.45045045045045046,
+    "fraction_of_669nt_window_pct": 0.4484304932735426,
+    "fraction_of_mature_circle_pct": 0.14903129657228018,
+    "fraction_of_plasmid_pct": 0.0569584203531422,
+    "note_measured": "The perturbation is not confined to the candidate's own 3 nt: the reference is re-folded per window (constrained partition function with all non-window nucleotides forced unpaired), so 3 extra positions change the reference pair set too.",
+    "reference_pairs_666nt": 4626,
+    "reference_pairs_669nt": 4648,
+    "reference_ensemble_free_energy_666nt_kcal_mol": -229.27284240722656,
+    "reference_ensemble_free_energy_669nt_kcal_mol": -232.08175659179688
+  },
+  "f_metric_value_shift": {
+    "original_lires_666nt": 11.954030649650369,
+    "original_lires_669nt": 11.227883639811877,
+    "original_relative_change_pct": -6.0744951315624265,
+    "median_abs_relative_change_pct": 3.6616882562106428,
+    "p90_abs_relative_change_pct": 7.949196851823865,
+    "max_abs_relative_change_pct": 25.660165790771156,
+    "n_candidates_decreased": 213,
+    "n_candidates_increased": 43,
+    "n_candidates_unchanged": 0,
+    "median_abs_relative_change_internal_term_pct": 7.815721944624994,
+    "median_abs_relative_change_crosstalk_term_pct": 0.9867004614169737,
+    "interpretation": "The metric VALUE is not stable: the original shifts by about -6.1% and 213/256 random candidates move in the same direction. Only the RANK is stable. The shift is carried almost entirely by the internal term."
+  },
+  "report_claims": {
+    "summary_json_absolute_percentile_change": 2.34375,
+    "summary_json_robust_within_10_percentile_points": true,
+    "reproduced_percentile_666nt": 69.140625,
+    "reproduced_percentile_669nt": 71.484375,
+    "reproduced_signed_delta_pp": -2.34375,
+    "reproduced_absolute_delta_pp": 2.34375,
+    "reproduces_exactly": true,
+    "claim_literally_true": true
+  },
+  "f_verdict": "The report's headline number reproduces exactly (69.140625 -> 71.484375, delta = -2.34375 pp, from 6 of 256 candidates flipping), and the 'within 10 pp' claim is literally true. It is also weak evidence: it is a fixed-tolerance check on a 3-nt (0.45% of the window) perturbation, and the paired shift, though far below the tolerance, is statistically significant (95% CI excludes 0, sign-test p = 0.0312) and one-directional. So the boundary is rank-robust in the coarse sense the report claims, but 'robust' does not mean 'no effect', and the metric value itself is not robust (original changes by -6.07%).",
+  "measured_vs_estimated": {
+    "measured": [
+      "percentiles, worse/ties counts, Pearson/Spearman, status flips, mean/sd/SE of d, 95% CI, exact sign-test p, metric relative changes, internal/crosstalk split",
+      "all read or derived directly from candidate_metrics.csv"
+    ],
+    "estimated": [
+      "bootstrap CI (resampling, seed 20260804)",
+      "MDEdelta at 80% power and the n required for a 10 pp MDE (normal approximation on sd(d), assumes sd(d) constant in n)",
+      "power_for_10pp (normal approximation)"
+    ],
+    "not_verified_here": [
+      "the 4626/4648 reference pair counts and the reference free energies are quoted from summary.json (they come from ViennaRNA, which this script does not run)",
+      "window coordinates are quoted from combined_circdesign_analysis.py:52-54"
+    ]
+  }
+}
