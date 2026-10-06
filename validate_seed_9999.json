@@ -1,0 +1,32 @@
+{
+  "what": "out-of-sample replication of the folding-degree preferential test",
+  "seed_offset": 9999,
+  "n_generated": 2000,
+  "n_correctness_passing": 792,
+  "n_mfe_competitive": 115,
+  "dominators_three_objective": 37,
+  "dominators_correctness_passing": 14,
+  "n_background": 250,
+  "domination_rate_percent": 1.7676767676767677,
+  "tests": {
+    "folding_CDS": {
+      "dominators_pass": 11,
+      "n_dominators": 14,
+      "background_pass": 176,
+      "n_background": 250,
+      "fisher_p": 0.7634156514882331,
+      "significant": false
+    },
+    "ires_occlusion": {
+      "dominators_pass": 3,
+      "n_dominators": 14,
+      "background_pass": 91,
+      "n_background": 250,
+      "fisher_p": 0.39068381099760063,
+      "significant": false
+    }
+  },
+  "prediction": "folding degree removes dominators preferentially at p < 0.05",
+  "verdict": "NOT REPRODUCED -- the earlier significant result was a search artefact",
+  "note": "the in-sample result came from a search over five combinations; this run uses an unused seed and a prediction fixed before the draw"
+}
