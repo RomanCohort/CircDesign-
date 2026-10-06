@@ -13,3 +13,7 @@ __pycache__/
 
 # 旧版报告（含已更正的分析错误，不应公开发布）
 _backup_原版报告_Aug5.docx
+
+# 含已更正分析错误的版本，不随仓库发布（本地保留）
+Combined_circDesign_回顾性计算评估报告.docx
+Combined_circDesign_回顾性计算评估报告.pdf
