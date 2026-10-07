@@ -47,6 +47,7 @@ BOUND = load_json("boundary_test.json")
 REFOLD = load_json("refold_check.json")
 REPRO = load_json("shuffle_repro_test.json")
 ACC = load_json("accessibility_summary.json")
+CLUST = load_json("arrangement_clusters.json")
 
 _panel_csv = ROOT / "design_panel.csv"
 PANEL_BY_ID = (
@@ -1054,6 +1055,18 @@ def main():
             "因此“本序列最优”这一表述，只有在指明空间与目标集时才成立。脱离空间的绝对最优"
             "与本报告的全部测量结果矛盾。可支持的表述见第十一节。",
         )
+        if CLUST and CLUST.get("dominator_spread"):
+            sp = CLUST["dominator_spread"]
+            add_body(
+                doc,
+                "需要说明这些反例的性质：它们不是一个可描述的类别。把全部 "
+                f"{CLUST['n_candidates']:,} 条候选嵌入排列空间（密码子对残差矩阵，3721 维——实际"
+                "密码子对数减去在相同密码子多重集随机排列下的精确期望），支配者在其中的离散度与"
+                f"随机抽取同尺寸子集无差异：观测 {sp['observed']:.2f}，随机均值 "
+                f"{sp['null_mean']:.2f}（SD {sp['null_sd']:.2f}），z = {sp['z']:+.2f}，"
+                f"单尾 p = {sp['p_tighter']:.2f}。因此不存在“照抄某一排列模式即可超过本构建”的"
+                "设计路径——它们是同一光滑分布的尾部，而不是一类可复制的解。",
+            )
 
     add_heading(doc, "10　方法学注意与复现", 1)
     if REFOLD and REPRO:
@@ -1129,6 +1142,14 @@ def main():
             "Pareto 最优性不要求在任何单一目标上领先。本构建在全部七项目标上没有一项排名第一，"
             "其位置来自“无方案能同时不劣于它”，而非“它在某处最强”。这一区别在引用时不可省略。",
         ]
+    if CLUST:
+        limitations.append(
+            "为检验“是否存在可复制的更好排列类别”，本报告在排列空间还做过一次 k-means 扫描"
+            "（k = 2 至 12）。8 个 k 值中有 2 个的富集检验达到 p < 0.05，与期望假阳性 0.4 条"
+            "相当，且效应量极小（最富集簇的支配率 1.9–3.0%，整体为 1.45%）。该扫描的自由参数 k"
+            "本身构成搜索空间，单独不构成证据，故正文只报告不依赖 k 的散布检验。"
+            "两者均见 arrangement_clusters.json。",
+        )
     for item in limitations:
         add_bullet(doc, item)
     adv_rate_s = f"{ADV['rate_passing_percent']:.2f}%" if ADV else "约 2%"
