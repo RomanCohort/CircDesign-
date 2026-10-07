@@ -483,7 +483,10 @@ def evaluate_candidate(candidate: Candidate) -> Dict[str, object]:
         "cds_gc3_fraction": gc3_fraction(candidate.cds_dna),
         "bpp_cutoff": _WORKER_CUTOFF,
         "fold_elapsed_seconds": time.time() - t0,
-        "mfe_dot_bracket": structure if candidate.candidate_id == "original" else "",
+        # `structure` is computed for every candidate; this used to keep it only for
+        # the original, so any later structural analysis needed a full 261-sequence
+        # refold. 2 KB per row is negligible -- persist it for all of them.
+        "mfe_dot_bracket": structure,
     }
     result.update(primary)
     result.update({f"{key}_ires669": value for key, value in sensitivity.items()})
