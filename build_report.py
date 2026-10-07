@@ -48,6 +48,7 @@ REFOLD = load_json("refold_check.json")
 REPRO = load_json("shuffle_repro_test.json")
 ACC = load_json("accessibility_summary.json")
 CLUST = load_json("arrangement_clusters.json")
+SPACER = load_json("validate_spacer.json")
 
 _panel_csv = ROOT / "design_panel.csv"
 PANEL_BY_ID = (
@@ -894,6 +895,22 @@ def main():
                 "由 IRES 转入起始密码子的通道，其可及性直接影响翻译起始效率，而它在本次分析之前"
                 "并未被任何一项原目标覆盖。",
             )
+            if SPACER and SPACER.get("metrics", {}).get("acc_SPACER"):
+                sm = SPACER["metrics"]["acc_SPACER"]
+                ci = sm["bootstrap_ci"]
+                add_body(
+                    doc,
+                    "该结果已做样本外复现：以未使用过的随机种子重新抽取 "
+                    f"{SPACER['n_background']} 条可建成设计作为独立背景，本构建的间隔区"
+                    f"可及性位次为 {sm['fresh_percentile']:.1f}%（自助法 95% 区间 "
+                    f"[{ci[0]:.1f}, {ci[1]:.1f}]），与本节报告的 {100 - sp['percent_better_than_construct']:.1f}% "
+                    f"一致。同一验证也覆盖了其余三项指标；TIR 与最长螺旋复现良好，"
+                    "CDS 全局可及性的位次也基本一致（本节第 "
+                    f"{100 - ACC['construct_position']['acc_CDS']['percent_better_than_construct']:.1f} "
+                    f"百分位，新背景第 {SPACER['metrics']['acc_CDS']['fresh_percentile']:.1f} 百分位），"
+                    "差异在背景样本量与总体抽样波动范围内。"
+                    "详见 validate_spacer.json。",
+                )
         add_body(
             doc,
             f"并入全部四项后，{ACC['n_buildable']:,} 条可建成同义设计中 "
@@ -1193,6 +1210,8 @@ def main():
         ("circrna_3d_validation.py / .json", "二维预测与三维模型比对（受限于旧版模型）"),
         ("persist_structures.py / structures_261.csv",
          "261 条候选的 circular MFE 二级结构串（原实现只保留了原序列一条）"),
+        ("validate_spacer.py / validate_spacer.json",
+         "可及性各指标的样本外复现（独立种子背景 500 条）"),
         ("sequence_optimality_report.md", "最优性论证报告：可证范围与证据边界"),
         ("figure_1/2/3（PNG + SVG）", "Wiki 可用的位图与矢量图"),
     ]

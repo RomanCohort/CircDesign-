@@ -1,0 +1,54 @@
+{
+  "what": "out-of-sample validation of the IRES-CDS spacer accessibility result",
+  "fresh_seed_offset": 9999,
+  "n_background": 500,
+  "metrics": {
+    "acc_SPACER": {
+      "construct": 0.4086897055160686,
+      "fresh_median": 0.3438110790033534,
+      "fresh_percentile": 92.60000000000001,
+      "bootstrap_ci": [
+        90.2,
+        94.8
+      ],
+      "report_percentile": 91.2,
+      "n_background": 500
+    },
+    "acc_TIR": {
+      "construct": 0.2116298530330217,
+      "fresh_median": 0.29563770857760874,
+      "fresh_percentile": 16.0,
+      "bootstrap_ci": [
+        12.8,
+        19.2
+      ],
+      "report_percentile": 17.2,
+      "n_background": 500
+    },
+    "acc_CDS": {
+      "construct": 0.34011217447907477,
+      "fresh_median": 0.3462085378000418,
+      "fresh_percentile": 27.6,
+      "bootstrap_ci": [
+        23.599999999999998,
+        31.6
+      ],
+      "report_percentile": 33.2,
+      "n_background": 500
+    },
+    "longest_helix": {
+      "construct": 20.0,
+      "fresh_median": 20.0,
+      "fresh_percentile": 0.0,
+      "bootstrap_ci": [
+        0.0,
+        0.0
+      ],
+      "report_percentile": 0.0,
+      "n_background": 500
+    }
+  },
+  "prediction": "spacer accessibility stays in the top decile (>= 90)",
+  "reproduced": true,
+  "note": "the report's spacer figure came from a single 250-design background with no out-of-sample check; the rest of the project's results were replicated across seeds"
+}
